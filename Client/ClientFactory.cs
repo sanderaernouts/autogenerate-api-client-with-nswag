@@ -7,7 +7,7 @@ namespace Example.Api.Client
 {
     public static class ClientFactory
     {
-        public static IValuesClient CreateModelsClient(string baseUrl, HttpClient http, Func<Task<string>> retrieveAuthorizationToken)
+        public static IValuesClient CreateValuesClient(string baseUrl, HttpClient http, Func<Task<string>> retrieveAuthorizationToken)
         {
             return new ValuesClient(baseUrl, http)
             {
