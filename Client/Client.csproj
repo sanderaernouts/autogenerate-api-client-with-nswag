@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>Example.Api.Client</AssemblyName>
+    <RootNamespace>Example.Api.Client</RootNamespace>
+    <GenerateCode>True</GenerateCode>
+  </PropertyGroup>
+<ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="NSwag.MSBuild" Version="11.17.21">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <Target Name="NSwag" BeforeTargets="PrepareForBuild" Condition="'$(GenerateCode)'=='True' ">
+    <Exec Command="$(NSwagExe_Core21) run nswag.json /variables:Configuration=$(Configuration)" />
+  </Target>
+</Project>
