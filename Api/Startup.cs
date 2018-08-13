@@ -33,9 +33,9 @@ namespace Example.Api
             }
 
             app.UseMvc();
-
-            // Register the Swagger generator
-            app.UseSwagger(typeof(Startup).Assembly, settings =>
+            
+            // Enable the Swagger UI middleware and the Swagger generator
+            app.UseSwaggerUi3WithApiExplorer(settings =>
             {
                 settings.PostProcess = document =>
                 {
@@ -43,11 +43,6 @@ namespace Example.Api
                     document.Info.Title = "Example API";
                     document.Info.Description = "REST API for example.";
                 };
-            });
-
-            // Enable the Swagger UI middleware and the Swagger generator
-            app.UseSwaggerUi3WithApiExplorer(settings =>
-            {
                 settings.GeneratorSettings.DefaultPropertyNameHandling =
                     PropertyNameHandling.CamelCase;
             });
