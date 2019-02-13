@@ -21,7 +21,17 @@ namespace Example.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSwaggerDocument(settings =>
+            {
+                settings.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "Example API";
+                    document.Info.Description = "REST API for example.";
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,19 +43,10 @@ namespace Example.Api
             }
 
             app.UseMvc();
-            
+
             // Enable the Swagger UI middleware and the Swagger generator
-            app.UseSwaggerUi3WithApiExplorer(settings =>
-            {
-                settings.PostProcess = document =>
-                {
-                    document.Info.Version = "v1";
-                    document.Info.Title = "Example API";
-                    document.Info.Description = "REST API for example.";
-                };
-                settings.GeneratorSettings.DefaultPropertyNameHandling =
-                    PropertyNameHandling.CamelCase;
-            });
+            app.UseSwagger();
+            app.UseSwaggerUi3();
         }
     }
 }

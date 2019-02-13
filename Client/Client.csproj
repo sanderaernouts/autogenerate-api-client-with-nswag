@@ -8,12 +8,12 @@
   </PropertyGroup>
 <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="NSwag.MSBuild" Version="11.17.21">
+    <PackageReference Include="NSwag.MSBuild" Version="12.0.13">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   
   <Target Name="NSwag" BeforeTargets="PrepareForBuild" Condition="'$(GenerateCode)'=='True' ">
-    <Exec Command="$(NSwagExe_Core21) run nswag.json /variables:Configuration=$(Configuration)" />
+    <Exec Command="$(NSwagExe_Core22) run nswag.json /variables:Configuration=$(Configuration)" />
   </Target>
 </Project>
