@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.CSharp", "Client.CSharp\Client.CSharp.csproj", "{63640A2A-0488-4F8A-990F-CEE40CB2FC14}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Typescript", "Client.Typescript\Client.Typescript.csproj", "{9BEA42A2-1B3C-479C-85F2-B5C67A54845A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3112F154-D34A-484D-9E19-8D9BD44F166C}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,10 @@ Global
 		{63640A2A-0488-4F8A-990F-CEE40CB2FC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63640A2A-0488-4F8A-990F-CEE40CB2FC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63640A2A-0488-4F8A-990F-CEE40CB2FC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BEA42A2-1B3C-479C-85F2-B5C67A54845A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BEA42A2-1B3C-479C-85F2-B5C67A54845A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BEA42A2-1B3C-479C-85F2-B5C67A54845A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BEA42A2-1B3C-479C-85F2-B5C67A54845A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
