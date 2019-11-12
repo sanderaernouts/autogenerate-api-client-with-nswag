@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Example.Api.Client.Contracts;
+using Example.Api.Client.CSharp.Contracts;
 
-namespace Example.Api.Client
+namespace Example.Api.Client.CSharp
 {
     public static class ClientFactory
     {

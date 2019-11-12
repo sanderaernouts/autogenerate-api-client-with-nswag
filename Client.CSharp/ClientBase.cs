@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Example.Api.Client
+namespace Example.Api.Client.CSharp
 {
     internal abstract class ClientBase
     {

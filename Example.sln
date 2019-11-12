@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{7FECAFF2-DB28-41F1-A1BC-BA84BC7F4EF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{7FECAFF2-DB28-41F1-A1BC-BA84BC7F4EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{63640A2A-0488-4F8A-990F-CEE40CB2FC14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.CSharp", "Client.CSharp\Client.CSharp.csproj", "{63640A2A-0488-4F8A-990F-CEE40CB2FC14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
