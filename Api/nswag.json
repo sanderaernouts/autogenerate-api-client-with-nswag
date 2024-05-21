@@ -1,5 +1,5 @@
 {
-  "runtime": "NetCore31",
+  "runtime": "Net80",
   "defaultVariables": "CSharpOutputPath=..\\Client.CSharp",
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
@@ -42,7 +42,7 @@
       "serializerSettingsType": null,
       "useDocumentProvider": false,
       "documentName": "v1",
-      "aspNetCoreEnvironment": null,
+      "aspNetCoreEnvironment": "CodeGeneration",
       "createWebHostBuilderMethod": null,
       "startupType": null,
       "allowNullableBodyParameters": true,

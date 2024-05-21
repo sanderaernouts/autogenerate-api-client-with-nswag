@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>Example.Api</AssemblyName>
     <RootNamespace>Example.Api</RootNamespace>
   </PropertyGroup>
@@ -20,14 +20,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
-    <PackageReference Include="NSwag.AspNetCore" Version="13.8.2" />
-    <PackageReference Include="NSwag.MSBuild" Version="13.8.2">
+    <PackageReference Include="NSwag.AspNetCore" Version="14.0.7" />
+    <PackageReference Include="NSwag.MSBuild" Version="14.0.7">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
 
   <Target Name="NSwag" BeforeTargets="AfterBuild" Condition="'$(TF_BUILD)'!='True'">
-    <Exec ConsoleToMSBuild="true" ContinueOnError="true" Command="$(NSwagExe_Core31) run nswag.json /variables:Configuration=$(Configuration),CSharpOutputPath=$(MSBuildThisFileDirectory)..\Client.CSharp,TypescriptOutputPath=$(MSBuildThisFileDirectory)..\Client.Typescript">
+    <Exec ConsoleToMSBuild="true" ContinueOnError="true" Command="$(NSwagExe_Net80) run nswag.json /variables:Configuration=$(Configuration),CSharpOutputPath=$(MSBuildThisFileDirectory)..\Client.CSharp,TypescriptOutputPath=$(MSBuildThisFileDirectory)..\Client.Typescript">
       <Output TaskParameter="ExitCode" PropertyName="NSwagExitCode"/>
       <Output TaskParameter="ConsoleOutput" PropertyName="NSwagOutput" />
     </Exec>
